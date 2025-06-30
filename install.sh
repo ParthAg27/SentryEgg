@@ -250,13 +250,21 @@ optimizeJavaServer() {
 
 if [ ! -e "server.jar" ] && [ ! -e "nodejs" ] && [ ! -e "PocketMine-MP.phar" ]; then
     display
-sleep 5
-echo "
-  $(tput setaf 3)Which platform are you gonna use?
-  1) Paper             2) Purpur
-  3) BungeeCord        4) Velocity
-  5) PocketmineMP      6) Node.js
-  "
+
+    echo "$(tput setaf 6)Note: To change versions, set these variables before running the script again:"
+    echo "      MINECRAFT_VERSION     (e.g. 1.20.6)"
+    echo "      VELOCITY_VERSION      (e.g. 3.3.0)"
+    echo "      PMMP_VERSION          (PM4 or PM5)"
+    echo "$(tput setaf 2)Example: MINECRAFT_VERSION=1.20.6 ./install.sh$(tput sgr0)"
+    echo
+
+    sleep 5
+    echo "
+      $(tput setaf 3)Which platform are you gonna use?
+      1) Paper             2) Purpur
+      3) BungeeCord        4) Velocity
+      5) PocketmineMP      6) Node.js
+      "
 read -r n
 
 case $n in
