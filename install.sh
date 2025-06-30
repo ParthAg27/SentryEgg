@@ -252,10 +252,10 @@ if [ ! -e "server.jar" ] && [ ! -e "nodejs" ] && [ ! -e "PocketMine-MP.phar" ]; 
     display
 
     echo "$(tput setaf 6)Note: To change versions, set these variables before running the script again:"
-    echo "      MINECRAFT_VERSION     (e.g. 1.20.6)"
+    echo "      MINECRAFT_VERSION     (e.g. 1.8.9)"
     echo "      VELOCITY_VERSION      (e.g. 3.3.0)"
     echo "      PMMP_VERSION          (PM4 or PM5)"
-    echo "$(tput setaf 2)Example: MINECRAFT_VERSION=1.20.6 ./install.sh$(tput sgr0)"
+    echo "$(tput setaf 2)Example: MINECRAFT_VERSION=1.20.6 $(tput sgr0)"
     echo
 
     sleep 5
